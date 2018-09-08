@@ -1,0 +1,40 @@
+body {
+  background: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.game-wrapper {}
+
+.title {
+  font-weight: 100;
+  color: #232323;
+  text-align: center;
+  /* Keep it simple :) */
+}
+
+.field {
+  margin: 50px auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 200px; /* 600 / 3 */
+  border-bottom: 1px solid #ccc;
+}
+  .row:last-child {
+    border-bottom: none;
+  }
+
+.box {
+  border-right: 1px solid #ccc;
+  width: 200px;
+  height: 100%;
+}
+  .box:last-child {
+    border-right: none;
+  }
