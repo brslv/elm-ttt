@@ -1,7 +1,7 @@
 {--
 NOTES
 
-ok, let's create a git repository for the project...
+pheww... :)
 
 [x] make the game layout first
   [x] add title
@@ -13,8 +13,33 @@ ok, let's create a git repository for the project...
 
 module Main exposing (..)
 
+import Browser
 import Html exposing (div, text, h1)
 import Html.Attributes exposing (class)
+
+-- MAIN
+
+main =
+  Browser.sandbox
+    { init = init
+    , view = view
+    , update = update
+    }
+
+init = initialState
+
+
+-- MODEL
+
+initialState =
+  [] -- this will represent our field for now...
+
+-- UPDATE
+
+update msg model =
+  model -- for now, we're simply going to return the same model on each update...
+
+-- VIEW
 
 view model =
   div [ class "game-wrapper" ]
@@ -39,6 +64,3 @@ view model =
                   ]
             ]
       ]
-
-main =
-  view "fake model for now"
